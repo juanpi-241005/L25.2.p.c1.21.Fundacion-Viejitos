@@ -32,11 +32,11 @@ fundacion.procesarDonante(donante4);
 
 let salida = document.getElementById("salida");
 if(salida){
-    salida.innerHTML += `<p>${donante1.nombre} aporta $${donante1.totalDolares().toFixed(2)} (Bs.${donante1.totalBolivares().toFixed(2)})</p>`;
-    salida.innerHTML += `<p>${donante2.nombre} aporta $${donante2.totalDolares().toFixed(2)} (Bs.${donante2.totalBolivares().toFixed(2)})</p>`;
-    salida.innerHTML += `<p>${donante3.nombre} aporta $${donante3.totalDolares().toFixed(2)} (Bs.${donante3.totalBolivares().toFixed(2)})</p>`;
-    salida.innerHTML += `<p>${donante4.nombre} aporta $${donante4.totalDolares().toFixed(2)} (Bs.${donante4.totalBolivares().toFixed(2)})</p>`;
-    salida.innerHTML += `<p>En total se recaudaron $${fundacion.totalFinalDolares().toFixed(2)} (Bs.${fundacion.totalFinalBolivares().toFixed(2)})</p>`;
+    salida.innerHTML += `<p>${donante1.nombre} aporta $${donante1.totalDolares().toFixed(2)} (Bs.${donante1.totalBolivares()})</p>`;
+    salida.innerHTML += `<p>${donante2.nombre} aporta $${donante2.totalDolares().toFixed(2)} (Bs.${donante2.totalBolivares()})</p>`;
+    salida.innerHTML += `<p>${donante3.nombre} aporta $${donante3.totalDolares().toFixed(2)} (Bs.${donante3.totalBolivares()})</p>`;
+    salida.innerHTML += `<p>${donante4.nombre} aporta $${donante4.totalDolares().toFixed(2)} (Bs.${donante4.totalBolivares()})</p>`;
+    salida.innerHTML += `<p>En total se recaudaron $${fundacion.totalFinalDolares().toFixed(2)} (Bs.${fundacion.totalFinalBolivares()})</p>`;
     salida.innerHTML += `<p>El mejor donador fue ${fundacion.mayorDonante()}</p>`;
 }
 else {
