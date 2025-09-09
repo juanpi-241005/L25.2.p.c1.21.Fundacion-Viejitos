@@ -7,22 +7,22 @@ export default class Cl_Fundacion {
     }
 
     procesarDonante(don){
-        this.acTotalDolaresPP += don.totalDolares();
+        this.acTotalDolaresPP += don.totalDolaresPP();
         
-        this.acTotalBolivaresPP += don.totalBolivares();
+        this.acTotalBolivaresPP += don.totalBolivaresPP();
 
-        if(don.totalBolivares() > this.mayorAporte){
-            this.mayorAporte = don.totalBolivares();
+        if(don.totalBolivaresPP() > this.mayorAporte){
+            this.mayorAporte = don.totalBolivaresPP();
             this.mayorNombre = don.nombre;
         }
     }
 
     totalFinalDolares(){
-        return this.acTotalDolares;
+        return this.acTotalDolaresPP;
     }
 
     totalFinalBolivares(){
-        return this.acTotalBolivares;
+        return this.acTotalBolivaresPP;
     }
 
     mayorDonante(){
