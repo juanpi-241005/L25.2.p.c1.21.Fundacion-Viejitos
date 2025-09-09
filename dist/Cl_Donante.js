@@ -34,11 +34,11 @@ export default class Cl_Donante {
         return this.bolivares / 40;
     }
 
-    totalDolares(){
+    totalDolaresPP(){
         return this.dolares + this.convertirBolivares();
     }
 
-    totalBolivares(){
+    totalBolivaresPP(){
         return this.bolivares + this.convertirDolares();
     }
 }

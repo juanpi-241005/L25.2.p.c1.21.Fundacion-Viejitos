@@ -1,29 +1,29 @@
 import Cl_Donante from "./Cl_Donante";
 
 export default class Cl_Fundacion {
-    private acTotalDolares: number = 0;
-    private acTotalBolivares: number = 0;
+    private acTotalDolaresPP: number = 0;
+    private acTotalBolivaresPP: number = 0;
     private mayorAporte: number = 0;
     private mayorNombre: string = "";
     constructor(){}
 
     procesarDonante(don: Cl_Donante): void{
-        this.acTotalDolares += don.totalDolares();
+        this.acTotalDolaresPP += don.totalDolaresPP();
 
-        this.acTotalBolivares += don.totalBolivares();
+        this.acTotalBolivaresPP += don.totalBolivaresPP();
 
-        if(don.totalDolares() > this.mayorAporte){
-            this.mayorAporte = don.totalDolares();
+        if(don.totalDolaresPP() > this.mayorAporte){
+            this.mayorAporte = don.totalDolaresPP();
             this.mayorNombre = don.nombre;
         }
     }
 
     totalFinalDolares(): number{
-        return this.acTotalDolares;
+        return this.acTotalDolaresPP;
     }
 
     totalFinalBolivares(): number{
-        return this.acTotalBolivares;
+        return this.acTotalBolivaresPP;
     }
 
     mayorDonante(): string{

@@ -1,15 +1,15 @@
 export default class Cl_Fundacion {
     constructor(){
-        this.acTotalDolares = 0;
-        this.acTotalBolivares = 0;
+        this.acTotalDolaresPP = 0;
+        this.acTotalBolivaresPP = 0;
         this.mayorAporte = 0;
         this.mayorNombre = "";
     }
 
     procesarDonante(don){
-        this.acTotalDolares += don.totalDolares();
+        this.acTotalDolaresPP += don.totalDolares();
         
-        this.acTotalBolivares += don.totalBolivares();
+        this.acTotalBolivaresPP += don.totalBolivares();
 
         if(don.totalBolivares() > this.mayorAporte){
             this.mayorAporte = don.totalBolivares();
